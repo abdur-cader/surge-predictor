@@ -31,16 +31,8 @@ This project predicts parcel delivery surge levels (No Surge, Mild Surge, Low Su
 
 ## Features
 The model uses the following features:
-- year, month, day
-- parcel_count
-- day_of_week
-- is_weekend
-- is_holiday
-- is_holiday_soon
-- fleet_available
-- total_parcel_weight
-- avg_parcel_weight
-- avg_parcel_volume_size
+| year | month | day | parcel_count | day_of_week | is_weekend | is_holiday | is_holiday_soon | fleet_available | total_parcel_weight | avg_parcel_weight | avg_parcel_volume_size |
+|-------|-------|-----|--------------|--------------|-------------|------------|-----------------|----------------|--------------------|------------------|-----------------------|
 
 ## Models Trained
 1. Random Forest
