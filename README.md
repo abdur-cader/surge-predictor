@@ -57,7 +57,7 @@ pip install -r requirements.txt
 ```
 
 # Usage
-- If you would like to use pre-trained models, you may use joblib to import them from ./data/models/[model].pkl
+- If you would like to use pre-trained models, you may use joblib to import them from `./data/models/[model].pkl`
 1. To train models (run once):
 ```python
 trainer = ModelTrainer()
