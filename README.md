@@ -34,6 +34,11 @@ The model uses the following features:
 | year | month | day | parcel_count | day_of_week | is_weekend | is_holiday | is_holiday_soon | fleet_available | total_parcel_weight | avg_parcel_weight | avg_parcel_volume_size |
 |-------|-------|-----|--------------|--------------|-------------|------------|-----------------|----------------|--------------------|------------------|-----------------------|
 
+## Target
+The model predicts the following target variable:
+| surge_level | 
+|------------|
+
 ## Models Trained
 1. Random Forest
 2. XGBoost
