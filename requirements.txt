@@ -1,0 +1,9 @@
+pandas
+openpyxl
+xgboost
+catboost
+lightgbm
+prophet
+scikit-learn
+joblib
+numpy
