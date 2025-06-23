@@ -3,6 +3,32 @@
 ## Overview
 This project predicts parcel delivery surge levels (No Surge, Mild Surge, Low Surge, High Surge) based on historical data using machine learning models and Prophet for time series forecasting.
 
+## Layout
+```
+.
+│   LICENSE
+│   main.py
+│   README.md
+│   requirements.txt
+│
+├───data
+│   │   Prophet_train.xlsx
+│   │   results
+│   │    └ <results.xlsx>    <--- Results will be stored here by default  
+│   └───models
+│           cb_model.pkl
+│           lgb_model.pkl
+│           preprocessor.pkl
+│           rf_model.pkl
+│           xgb_model.pkl
+│           x_test.pkl
+│           y_test.pkl
+│
+└───helpers
+        prophet_setup.py
+        training.py
+```
+
 ## Features
 The model uses the following features:
 - year, month, day
@@ -11,7 +37,7 @@ The model uses the following features:
 - is_weekend
 - is_holiday
 - is_holiday_soon
-- fleet_available_3
+- fleet_available
 - total_parcel_weight
 - avg_parcel_weight
 - avg_parcel_volume_size
@@ -27,10 +53,11 @@ The model uses the following features:
 ### Installation
 Install all dependencies:
 ```bash
-pip install pandas matplotlib seaborn numpy scikit-learn xgboost lightgbm catboost prophet joblib ipykernel openpyxl
+pip install -r requirements.txt
 ```
 
 # Usage
+- If you would like to use pre-trained models, you may use joblib to import them from ./data/models/[model].pkl
 1. To train models (run once):
 ```python
 trainer = ModelTrainer()
@@ -46,3 +73,4 @@ results = forecaster.process_data(10)  # predict the next 10 surge levels for ea
 results_transformed = preprocessor.transform(results)
 predictions = model.predict(results_transformed)
 ```
+
